@@ -16,7 +16,8 @@ class _00_Just {
 
     def static rxGroovy(){
         Observable.just(1, 2, 3)
-                  .subscribe { number -> println number }
+                  .forEach { number -> println number }
+        // or .forEach { println it }
         // or .subscribe { println it }
     }
 

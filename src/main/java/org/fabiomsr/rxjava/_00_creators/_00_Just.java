@@ -13,9 +13,10 @@ public class _00_Just {
         System.out.println(3);
     }
 
-    private static void rxjava() {
+    private static void rxJava() {
         Observable.just(1, 2, 3)
-                  .subscribe(number -> System.out.println(number));
+                  .forEach(number -> System.out.println(number));
+        // or .forEach(System.out::println)
         // or .subscribe(System.out::println)
     }
 
@@ -23,7 +24,7 @@ public class _00_Just {
         System.out.println("Result: Java version");
         java();
         System.out.println("Result: RxJava version");
-        rxjava();
+        rxJava();
     }
 
 }

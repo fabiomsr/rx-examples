@@ -6,16 +6,17 @@ import rx.Observable
  * Created by fabiomsr on 29/10/16.
  */
 
-fun kotlin() {
+private fun kotlin() {
     println(1)
     println(2)
     println(3)
 }
 
-fun rxKotlin() {
+private fun rxKotlin() {
     Observable.just(1, 2, 3)
-              .subscribe { number -> println(number) }
-    // or .subscribe { println(it) }
+              .forEach { number -> println(number) }
+    // or .forEach { println(it) }
+    // or .forEach(::println)
     // or .subscribe(::println)
 }
 
